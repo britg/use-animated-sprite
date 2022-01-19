@@ -3,10 +3,6 @@ import { useFrame } from '@react-three/fiber';
 import { MutableRefObject, useEffect, useRef } from 'react';
 import { NearestFilter, RepeatWrapping, Sprite, Texture } from 'three';
 
-function randomNextTime(): number {
-  return (300 + Math.random() * 500) / 1000;
-}
-
 export interface SpriteSheetConfig {
   spriteSheetUrl: string;
   xCount: number; // The number of sprites along the x axis
@@ -25,7 +21,7 @@ export function useAnimatedSprite(
   const [texture] = useTexture([config.spriteSheetUrl]);
   const currentDeltaRef = useRef<number>(0);
   const currentIndexRef = useRef<number>(0);
-  const nextTime = useRef<number>(randomNextTime());
+  const nextTime = useRef<number>(config.interval || config.intervalFunc());
 
   texture.minFilter = NearestFilter;
   texture.magFilter = NearestFilter;
@@ -50,7 +46,7 @@ export function useAnimatedSprite(
   useFrame((_, delta) => {
     currentDeltaRef.current += delta;
     if (currentDeltaRef.current > nextTime.current) {
-      nextTime.current = randomNextTime();
+      nextTime.current = config.interval || config.intervalFunc();
       currentDeltaRef.current = 0;
       currentIndexRef.current += 1;
       if (currentIndexRef.current > config.spriteFrames - 1) {
