@@ -40,10 +40,13 @@
   "engines": {
     "node": ">=10"
   },
-  "dependencies": {},
   "devDependencies": {
     "@ava/typescript": "^1.1.1",
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@react-three/drei": "^8.6.0",
+    "@react-three/fiber": "^7.0.24",
+    "@types/react": "^17.0.38",
+    "@types/three": "^0.136.1",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
     "ava": "^3.12.1",
@@ -51,6 +54,7 @@
     "cspell": "^4.1.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.8.0",
+    "eslint-config-next": "^12.0.8",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-functional": "^3.0.2",
@@ -60,10 +64,11 @@
     "nyc": "^15.1.0",
     "open-cli": "^6.0.1",
     "prettier": "^2.1.1",
+    "react": "^17.0.2",
     "standard-version": "^9.0.0",
+    "three": "^0.136.0",
     "ts-node": "^9.0.0",
-    "typedoc": "^0.19.0",
-    "typescript": "^4.0.2"
+    "typescript": "^4.5.4"
   },
   "files": [
     "build/main",
