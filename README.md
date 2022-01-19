@@ -16,9 +16,11 @@ npm install use-animated-sprite
 
 ## Usage
 
-```typescript
+```tsx
 
 import { Sprite } from 'three';
+import { useRef } from 'react';
+import { useAnimatedSprite } from 'use-animated-sprite';
 
 function MySprite () {
 
@@ -39,6 +41,12 @@ function MySprite () {
 			return (300 + Math.random() * 500) / 1000;
 		}
 	})
+
+	return (
+		<sprite ref={spriteRef}>
+    	<spriteMaterial map={texture} />
+  	</sprite>
+	)
 }
 
 ```
