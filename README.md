@@ -14,7 +14,21 @@ npm install @react-three/drei @react-three/fiber react three
 npm install use-animated-sprite
 ```
 
-## Usage
+## Component Usage
+
+```tsx
+import { AnimatedSprite, SpriteSheetConfig } from 'use-animated-sprite';
+import { SpriteProps } from '@react-three/fiber';
+
+interface Props extends SpriteProps, SpriteSheetConfig {}
+
+function MySprite (props: Props) {
+	return <AnimatedSprite {...props}>
+}
+
+```
+
+## Hook Usage
 
 ```tsx
 
