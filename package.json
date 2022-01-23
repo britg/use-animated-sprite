@@ -1,6 +1,6 @@
 {
   "name": "use-animated-sprite",
-  "version": "1.0.2",
+  "version": "1.1.1",
   "description": "Animated sprite hook for React Three Fiber",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
