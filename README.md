@@ -16,6 +16,9 @@ npm install use-animated-sprite
 
 ## Component Usage
 
+See [Sprite](https://threejs.org/docs/#api/en/objects/Sprite)
+and [SpriteSheetConfig](https://github.com/britg/use-animated-sprite/blob/39d4441261ae029404fd4b538cef39a427d77d3a/src/lib/useAnimatedSprite.ts#L6)
+
 ```tsx
 import { AnimatedSprite, SpriteSheetConfig } from 'use-animated-sprite';
 import { SpriteProps } from '@react-three/fiber';
